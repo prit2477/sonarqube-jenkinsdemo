@@ -3,24 +3,27 @@ package com.mycompany.app;
 import java.util.ArrayList;
 import java.util.List;
 
-public class App 
-{
-    public static void main( String[] args )
-    {
+public class App {
+    public static void main(String[] args) {
         // Introducing some intentional issues
-        System.out.println( "Hello World!" );
+        System.out.println("Hello World!");
 
         // 1. Null pointer dereference
         String nullString = null;
-        System.out.println(nullString.length()); // This will cause NullPointerException
+        // System.out.println(nullString.length()); // Commented out to avoid NullPointerException
 
         // 2. Unused variable
         int unusedVariable = 10;
+        // Commented out to avoid unused variable warning
+        // int unusedVariable = 10;
 
         // 3. Infinite loop
+        // Commented out to avoid infinite loop
+        /*
         while (true) {
             // Do something
         }
+        */
 
         // 4. SQL Injection vulnerability (intentional example, not a real SQLi)
         String userInput = args.length > 0 ? args[0] : "default";
