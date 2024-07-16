@@ -26,9 +26,9 @@ pipeline {
                 withSonarQubeEnv('SonarQube') {
                     sh """
                         mvn sonar:sonar \
-                        -Dsonar.projectKey=demo \
-                        -Dsonar.host.url=http://localhost:9000 \
-                        -Dsonar.login=c342f1102f7aad0b382d136f194caf660352d799
+                        -Dsonar.projectKey=sonarqube-demo \
+                        -Dsonar.host.url=http://sonarqube:9000 \
+                        -Dsonar.login=1982aa19fc0cdc90a501a06c99e9ed0d529e4e13
                     """
                 }
             }
