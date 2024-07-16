@@ -27,10 +27,11 @@ pipeline {
 
         stage('SonarQube analysis'){
              steps{
-                sh "mvn sonar:sonar \
-                    -Dsonar.projectKey=demo \
-                    -Dsonar.host.url=http://localhost:9000 \
-                    -Dsonar.login=c342f1102f7aad0b382d136f194caf660352d799"
+                withSonarQubeEnv('SonarQube')
+                  sh "mvn sonar:sonar \
+                      -Dsonar.projectKey=demo \
+                      -Dsonar.host.url=http://localhost:9000 \
+                      -Dsonar.login=c342f1102f7aad0b382d136f194caf660352d799"
              }
         
         }
